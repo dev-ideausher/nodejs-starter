@@ -27,4 +27,23 @@ const uploadFile = (filename, bucketname, file,ContentType) => {
     })
 }
 
-module.exports = uploadFile;
+
+const deleteFile = (bucket_name,image_name) =>{
+
+    // Delete the image from the bucket
+    s3.deleteObject({
+        Bucket: bucket_name,
+        Key: image_name
+      }, function(err, data) {
+        if (err) console.log(err, err.stack);
+        else return data;
+      });
+}
+
+
+module.exports = {
+    uploadFile,
+    deleteFile
+}
+
+// deleteFile("userprofileimag","profile-1.jpg")

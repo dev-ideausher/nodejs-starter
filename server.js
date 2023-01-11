@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const app = require('./app');
 
-const {MONGO_DATABASE_DEV} = require("./config/config");
+// const {MONGO_DATABASE_DEV} = require("./config/config");
 
 //db
 mongoose.connect(
